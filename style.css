@@ -1,0 +1,193 @@
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Public Pixel', sans-serif;
+    width: 560px;
+    border: 5px solid white;
+    padding: 10px;
+}
+
+#title {
+    color: yellow;
+    text-align: center;
+    font-size: 62pt;
+    margin-bottom: 10px;
+}
+
+#game-over {
+    position: absolute;
+    color: red;
+    text-shadow: 4px 4px 4px rgb(167, 43, 43);
+    font-size: 60pt;
+    font-weight: 800;
+    top: 210px;
+    left: 120px;
+    z-index: 1;
+}
+
+
+
+#game-over-win {
+    position: absolute;
+    color: red;
+    text-shadow: 4px 4px 4px rgb(167, 43, 43);
+    font-size: 64pt;
+    font-weight: 800;
+    top: 210px;
+    left: 150px;
+    z-index: 1;
+}
+
+
+#reset {
+    height: 80px;
+    width: 180px;
+    background-color: red;
+    color: white;
+    font-size: 24pt;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    position: absolute;
+    top: 400px;
+    left: 190px;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    font-family: 'Public Pixel', sans-serif;
+}
+
+#reset:hover {
+    transform: scale(1.1);
+}
+
+#container {
+    /* margin: 0 auto; */
+    position: relative;
+}
+
+div.row div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+#world {
+    margin-bottom: 20px;
+    width: 560px;
+}
+
+.row {
+    display: flex;
+}
+
+div.brick {
+    background-color: rgb(23, 23, 197);
+    border-radius: 3px;
+}
+
+div.coin {
+    background-image: url('./assets/coin.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5px;
+}
+
+div.empty {
+    display: none;
+}
+
+#pacman {
+    background-image: url("./assets/pacman.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+#ghost {
+    background-image: url("./assets/green-ghost.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+#pacman-life-count {
+    display: flex;
+    gap: 5px;
+}
+
+#pacman-life {
+    background-image: url("./assets/pacman-dead.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+#pacman-life-dark {
+    background-image: url("./assets/pacman-dead.png");
+    filter: grayscale();
+    transform: rotate(90deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+#cherry {
+    background-image: url("./assets/cherry.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+.cherry-dark {
+    background-image: url("./assets/cherry.png");
+    filter: grayscale();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+#score {
+    border: 1px solid white;
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#counts {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 154px;
+}
+
+#cherry-count {
+    display: flex;
+    gap: 10px;
+}
